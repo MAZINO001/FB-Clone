@@ -35,7 +35,6 @@ body {
     color: var(--color-dark);
     background-color: var(--color-light);
     overflow: hidden;
-    margin: 0;
 }
 
 /* ======================== CUSTOR STYLE ======================== */
@@ -160,11 +159,12 @@ main {
 .main__container {
     display: grid;
     grid-template-columns: 18vw auto 20vw;
-    position: absolute;
+    position: relative;
     column-gap: 2rem;
 }
 
 /* ............... Start Main-left................... */
+    /* 
 .main__left {
     position: sticky;
     height: max-content;
@@ -185,6 +185,13 @@ aside {
     background: var(--color-white);
     margin-top: 1rem;
     border-radius: var(--card-border-radius);
+    overflow: hidden;
+}
+
+
+.menu__item{
+    background-color: red;
+
 }
 
 aside .menu__item {
@@ -203,17 +210,17 @@ aside .menu__item:hover {
 
 aside .menu__item img {
     width: 1.8rem;
-    margin: 2rem;
+    margin-left: 2rem;
     position: relative;
 }
 
-aside .notfy-counter {
+
+aside .notify__counte {
     background: var(--color-danger);
     color: var(--color-white);
     width: fit-content;
     font-size: 0.7rem;
-}
-
+} */
 /* ............... and Main-left................... */
 
 /* ======================== END MAIN ======================== */
