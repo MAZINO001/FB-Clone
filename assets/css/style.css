@@ -1,8 +1,149 @@
-/*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
-/*=============== GOOGLE FONTS ===============*/
-
-*::before ,*::after{
-
-    
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    list-style: none;
 }
+
+:root {
+    --color-white: hsl(252, 30%, 100%);
+    --color-light: hsl(252, 30%, 90%);
+    --color-gray: hsl(252, 15%, 60%);
+    --color-primary: hsl(252, 75%, 60%);
+    --color-secondary: hsl(252, 100%, 90%);
+    --color-success: hsl(120, 95%, 60%);
+    --color-danger: hsl(0, 95%, 60%);
+    --color-dark: hsl(252, 30%, 15%);
+    --color-black: hsl(252, 30%, 8%);
+
+    --border-radius: 2rem;
+    --card-border-radius: 1rem;
+
+    --btn-padding: 0.6rem 2rem;
+
+    --search-padding: 0.6rem 1rem;
+    --card-padding: 1rem;
+
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--color-dark);
+    background-color: var(--color-light);
+    overflow: hidden;
+    margin: 0;
+}
+
+/* ======================== CUSTOR STYLE ======================== */
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.profile__pecture {
+    width: 3rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile__pecture:hover {
+    opacity: 0.75;
+}
+
+.btn {
+    padding: var(--btn-padding);
+    display: inline-block;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    font-size: 0.9rem;
+    font-weight: 400;
+    transition: 0.3 ease all;
+}
+
+.btn:hover {
+    opacity: 0.75;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.text-bold {
+    font-weight: 500;
+}
+
+.text-gray {
+    color: var(--color-gray);
+}
+
+/* ======================== START NAV-BAR ======================== */
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    padding: 0.7rem 0;
+    background-color: var(--color-white);
+}
+
+.nav__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+
+}
+
+nav .search__bar {
+    padding: var(--search-padding);
+    background-color: var(--color-light);
+    border-radius: var(--border-radius);
+
+}
+
+nav .search__bar input[type="search"] {
+    background: transparent;
+    width: 30vw;
+    margin-left: 1rem;
+    font-size: 0.9rem;
+    color: var(--color-dark);
+    outline: none;
+    border: none;
+}
+
+nav .search__bar input[type="search"]::placeholder {
+    color: var(--color-gray);
+}
+
+.add__post {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.logo h3 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    user-select: none;
+    color: var(--color-dark);
+}
+
+
+
+.logo span {
+    color: var(--color-danger);
+}
+
+/* ======================== END NAV-BAR ======================== */
