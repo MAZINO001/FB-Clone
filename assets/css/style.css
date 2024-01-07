@@ -1,9 +1,13 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+/*=============== GOOGLE FONTS ===============*/
+
 *::before,
 *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline: none;
+    outline: 0;
     border: none;
     text-decoration: none;
     list-style: none;
@@ -11,216 +15,103 @@
 
 :root {
     --color-white: hsl(252, 30%, 100%);
-    --color-light: hsl(252, 30%, 90%);
-    --color-gray: hsl(252, 15%, 60%);
+    --color-light: hsl(252, 30%, 95%);
+    --color-gray: hsl(252, 15%, 65%);
     --color-primary: hsl(252, 75%, 60%);
     --color-secondary: hsl(252, 100%, 90%);
     --color-success: hsl(120, 95%, 60%);
-    --color-danger: hsl(0, 95%, 60%);
-    --color-dark: hsl(252, 30%, 15%);
-    --color-black: hsl(252, 30%, 8%);
+    --color-danger: hsl(0, 95%, 65%);
+    --color-dark: hsl(252, 30%, 17%);
+    --color-black: hsl(252, 30%, 10%);
 
     --border-radius: 2rem;
     --card-border-radius: 1rem;
-
     --btn-padding: 0.6rem 2rem;
-
     --search-padding: 0.6rem 1rem;
     --card-padding: 1rem;
 
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Poppins" , sans-serif;
     color: var(--color-dark);
     background-color: var(--color-light);
-    overflow: hidden;
+    overflow-x: hidden;
 }
-
 /* ======================== CUSTOR STYLE ======================== */
-.container {
-    width: 90%;
+.container{
+    width: 80%;
     margin: 0 auto;
 }
-
-img {
+.profile__photo{
+width: 2.7rem;
+aspect-ratio: 1/1;
+border-radius: 50%;
+overflow: hidden;
+}
+img{
     display: block;
     width: 100%;
 }
-
-a {
-    text-decoration: none;
-}
-
-.profile__pecture {
-    width: 3rem;
-    aspect-ratio: 1/1;
-    border-radius: 50%;
-    overflow: hidden;
-}
-
-.profile__pecture:hover {
-    opacity: 0.75;
-}
-
-.btn {
-    padding: var(--btn-padding);
+.btn{
     display: inline-block;
-    cursor: pointer;
-    border-radius: var(--border-radius);
-    font-size: 0.9rem;
-    font-weight: 400;
-    transition: 0.3 ease all;
-}
-
-.btn:hover {
-    opacity: 0.75;
-}
-
-.btn-primary {
-    background-color: var(--color-primary);
-    color: var(--color-white);
-}
-
-.text-bold {
+    padding: var(--btn-padding);
     font-weight: 500;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
 }
-
-.text-gray {
-    color: var(--color-gray);
+.btn:hover{
+    opacity: 0.8;
+}
+.btn__primary{
+    background: var(--color-primary);
+    color: white;
+}
+.text__bold{
+font-weight: 500;
+}
+.text__meted{
+color: var(--color-gray);
 }
 
 /* ======================== START NAV-BAR ======================== */
-nav {
+nav{
     width: 100%;
-    position: fixed;
+    background-color: var(--color-white);
+    padding: 0.7rem 0;
+    position:  fixed;
     top: 0;
     z-index: 10;
-    padding: 0.7rem 0;
-    background-color: var(--color-white);
+
 }
 
-.nav__container {
+nav .container{
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    height: 40px;
-
+    justify-content: space-between;
 }
-
-nav .search__bar {
-    padding: var(--search-padding);
+nav .search__bar{
     background-color: var(--color-light);
     border-radius: var(--border-radius);
-
+    padding: var(--search-padding);
 }
 
-nav .search__bar input[type="search"] {
+nav .search__bar input[type="search"]{
     background: transparent;
     width: 30vw;
     margin-left: 1rem;
     font-size: 0.9rem;
     color: var(--color-dark);
-    outline: none;
-    border: none;
-}
 
-nav .search__bar input[type="search"]::placeholder {
+}
+nav .search__bar input[type="search"]::placeholder{
     color: var(--color-gray);
 }
-
-.add__post {
+nav .creat{
     display: flex;
     align-items: center;
-    gap: 2rem;
-}
-
-.logo h3 {
-    font-size: 1.6rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    user-select: none;
-    color: var(--color-dark);
-}
-
-
-
-.logo span {
-    color: var(--color-danger);
 }
 
 /* ======================== END NAV-BAR ======================== */
-/* ======================== START MAIN ======================== */
-main {
-    position: relative;
-    top: 6rem;
-}
-
-.main__container {
-    display: grid;
-    grid-template-columns: 18vw auto 20vw;
-    position: relative;
-    column-gap: 2rem;
-}
-
-/* ............... Start Main-left................... */
-    /* 
-.main__left {
-    position: sticky;
-    height: max-content;
-    top: 5.4rem;
-}
-
-.main__left .profile {
-    background: var(--color-white);
-    padding: var(--card-padding);
-    border-radius: var(--card-border-radius);
-    width: 100%;
-    gap: 1rem;
-    display: flex;
-
-}
-
-aside {
-    background: var(--color-white);
-    margin-top: 1rem;
-    border-radius: var(--card-border-radius);
-    overflow: hidden;
-}
-
-
-.menu__item{
-    background-color: red;
-
-}
-
-aside .menu__item {
-    display: flex;
-    align-items: center;
-    height: 4rem;
-    position: relative;
-    cursor: pointer;
-    transition: 0.3s ease all;
-    background: var(--color-white);
-}
-
-aside .menu__item:hover {
-    background: var(--color-light);
-}
-
-aside .menu__item img {
-    width: 1.8rem;
-    margin-left: 2rem;
-    position: relative;
-}
-
-
-aside .notify__counte {
-    background: var(--color-danger);
-    color: var(--color-white);
-    width: fit-content;
-    font-size: 0.7rem;
-} */
-/* ............... and Main-left................... */
-
-/* ======================== END MAIN ======================== */
