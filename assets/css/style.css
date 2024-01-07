@@ -49,6 +49,10 @@ img {
     width: 100%;
 }
 
+a {
+    text-decoration: none;
+}
+
 .profile__pecture {
     width: 3rem;
     aspect-ratio: 1/1;
@@ -147,3 +151,69 @@ nav .search__bar input[type="search"]::placeholder {
 }
 
 /* ======================== END NAV-BAR ======================== */
+/* ======================== START MAIN ======================== */
+main {
+    position: relative;
+    top: 6rem;
+}
+
+.main__container {
+    display: grid;
+    grid-template-columns: 18vw auto 20vw;
+    position: absolute;
+    column-gap: 2rem;
+}
+
+/* ............... Start Main-left................... */
+.main__left {
+    position: sticky;
+    height: max-content;
+    top: 5.4rem;
+}
+
+.main__left .profile {
+    background: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    width: 100%;
+    gap: 1rem;
+    display: flex;
+
+}
+
+aside {
+    background: var(--color-white);
+    margin-top: 1rem;
+    border-radius: var(--card-border-radius);
+}
+
+aside .menu__item {
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s ease all;
+    background: var(--color-white);
+}
+
+aside .menu__item:hover {
+    background: var(--color-light);
+}
+
+aside .menu__item img {
+    width: 1.8rem;
+    margin: 2rem;
+    position: relative;
+}
+
+aside .notfy-counter {
+    background: var(--color-danger);
+    color: var(--color-white);
+    width: fit-content;
+    font-size: 0.7rem;
+}
+
+/* ............... and Main-left................... */
+
+/* ======================== END MAIN ======================== */
