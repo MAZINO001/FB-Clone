@@ -31,7 +31,7 @@
     --card-padding: 1rem;
 
     --sticky-top-left: -8.8rem;
-    --sticky-top-right: -26rem;
+    --sticky-top-right: -29rem;
 }
 
 body {
@@ -39,6 +39,7 @@ body {
     color: var(--color-dark);
     background-color: var(--color-light);
     overflow-x: hidden;
+    box-sizing: border-box;
 }
 
 /* ======================== CUSTOR STYLE ======================== */
@@ -175,6 +176,10 @@ main .container .left .profile {
     box-sizing: border-box;
 }
 
+main .container .left .profile h4,
+main .container .left .profile p {
+    margin: 0;
+}
 
 /* ............Sidebar............ */
 .left .sidebar {
@@ -301,7 +306,7 @@ main .container .left .profile {
 .middle .stories {
     display: flex;
     justify-content: space-between;
-    height: 12rem;
+    height: 10rem;
     gap: 0.5rem;
 }
 
@@ -318,6 +323,9 @@ main .container .left .profile {
 
 .middle .stories .story .name {
     z-index: 2;
+    font-size: 0.81rem;
+    position: relative;
+    top: 22px;
 }
 
 .middle .stories .story {
@@ -362,10 +370,13 @@ main .container .left .profile {
 
 
 .middle .story .profile__photo {
-    width: 2rem;
-    height: 2rem;
+    width: 1.7rem;
+    height: 1.7rem;
     align-self: start;
     border: 3px solid var(--color-primary);
+    position: relative;
+    right: 14px;
+    bottom: 14px;
 }
 
 /* ............ creat post ............. */
@@ -526,9 +537,9 @@ main .container .right {
 
 .right .messages .message {
     display: flex;
-    gap: 1rem;
-    margin-bottom: -1rem;
     align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
 }
 
 .right .message .profile__photo {
@@ -600,3 +611,14 @@ main .container .right {
 }
 
 /* ======================== END MAIN ======================== */
+
+
+.right .messages h5,
+.right .messages p {
+    margin: 0;
+}
+
+.right .request .req__info h5,
+.right .request .req__info p {
+    margin: 0;
+}
