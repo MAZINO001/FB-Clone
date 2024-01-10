@@ -119,3 +119,33 @@ fontSizes.forEach(size => {
 });
 
 
+/* ........ custom bg_color......... */
+const colorPallet = document.querySelectorAll(".choose__color span")
+
+function removColorSelector() {
+    colorPallet.forEach(color => {
+        color.classList.remove("active")
+    })
+}
+
+colorPallet.forEach(color => {
+    color.addEventListener("click", () => {
+        removColorSelector()
+        let primaryhue;
+        color.classList.toggle("active")
+        if (color.classList.contains('color__1')) {
+            primaryhue = 252;
+        } else if (color.classList.contains('color__2')) {
+            primaryhue = 52;
+        } else if (color.classList.contains('color__3')) {
+            primaryhue = 352;
+        } else if (color.classList.contains('color__4')) {
+            primaryhue = 152;
+        } else if (color.classList.contains('color__5')) {
+            primaryhue = 202;
+        }
+
+        // Change the size from the root of HTML
+        root.style.setProperty('--primary-color-hue', primaryhue)
+    });
+});
