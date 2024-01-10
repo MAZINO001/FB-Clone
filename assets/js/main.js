@@ -149,3 +149,50 @@ colorPallet.forEach(color => {
         root.style.setProperty('--primary-color-hue', primaryhue)
     });
 });
+
+
+/*......................... custome background colors .........................*/
+const bg1 = document.querySelector(".bg__1");
+const bg2 = document.querySelector(".bg__2");
+const bg3 = document.querySelector(".bg__3");
+let lightColorLightness;
+let whiteColorLightness;
+let darkColorLightness;
+
+function changeBg() {
+    root.style.setProperty("--light-color-lightness", lightColorLightness);
+    root.style.setProperty("--white-color-lightness", whiteColorLightness);
+    root.style.setProperty("--dark-color-lightness", darkColorLightness);
+}
+
+// Call changeBg initially to set default background colors
+changeBg();
+
+bg2.addEventListener("click", () => {
+    darkColorLightness = "95%";
+    whiteColorLightness = "20%";
+    lightColorLightness = "15%";
+
+    bg2.classList.add("active");
+    bg3.classList.remove("active");
+    bg1.classList.remove("active");
+    changeBg();
+});
+
+bg3.addEventListener("click", () => {
+    darkColorLightness = "95%";
+    whiteColorLightness = "10%";
+    lightColorLightness = "0%";
+
+    bg3.classList.add("active");
+    bg2.classList.remove("active");
+    bg1.classList.remove("active");
+    changeBg();
+});
+
+bg1.addEventListener("click", () => {
+    bg1.classList.add("active");
+    bg2.classList.remove("active");
+    bg3.classList.remove("active");
+    window.location.reload()
+});
