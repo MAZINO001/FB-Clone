@@ -155,6 +155,7 @@ colorPallet.forEach(color => {
 const bg1 = document.querySelector(".bg__1");
 const bg2 = document.querySelector(".bg__2");
 const bg3 = document.querySelector(".bg__3");
+var root = document.querySelector(":root");
 let lightColorLightness;
 let whiteColorLightness;
 let darkColorLightness;
@@ -162,7 +163,7 @@ let darkColorLightness;
 function changeBg() {
     root.style.setProperty("--light-color-lightness", lightColorLightness);
     root.style.setProperty("--white-color-lightness", whiteColorLightness);
-    root.style.setProperty("    --dark-color-lightness", darkColorLightness);
+    root.style.setProperty("--dark-color-lightness", darkColorLightness);
 }
 
 // Call changeBg initially to set default background colors
