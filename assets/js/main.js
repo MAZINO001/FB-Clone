@@ -76,4 +76,46 @@ theme.addEventListener("click", openThemeModal);
 themeModal.addEventListener("click", closeThemeModal);
 
 
-/* ........ custom fonts......... */ 
+/* ........ custom fonts......... */
+const fontSizes = document.querySelectorAll(".choose__size span");
+var root = document.querySelector(":root");
+
+function removeSizeSelector() {
+    fontSizes.forEach(size => {
+        size.classList.remove("active")
+    })
+}
+
+fontSizes.forEach(size => {
+    size.addEventListener("click", () => {
+        removeSizeSelector()
+        let fontsize;
+        size.classList.toggle("active")
+        if (size.classList.contains('font__size-1')) {
+            fontsize = "10px";
+            root.style.setProperty("--sticky-top-left", "-8.8rem");
+            root.style.setProperty("--sticky-top-right", "-8.8rem");
+        } else if (size.classList.contains('font__size-2')) {
+            fontsize = "13px";
+            root.style.setProperty("--sticky-top-left", "-8.8rem");
+            root.style.setProperty("--sticky-top-right", "-7rem");
+        } else if (size.classList.contains('font__size-3')) {
+            fontsize = "16px";
+            root.style.setProperty("--sticky-top-left", "-2rem");
+            root.style.setProperty("--sticky-top-right", "-17rem");
+        } else if (size.classList.contains('font__size-4')) {
+            fontsize = "19px";
+            root.style.setProperty("--sticky-top-left", "-5rem");
+            root.style.setProperty("--sticky-top-right", "-25rem");
+        } else if (size.classList.contains('font__size-5')) {
+            fontsize = "22px";
+            root.style.setProperty("--sticky-top-left", "-10rem");
+            root.style.setProperty("--sticky-top-right", "-33rem");
+        }
+
+        // Change the size from the root of HTML
+        document.querySelector("html").style.fontSize = fontsize;
+    });
+});
+
+
