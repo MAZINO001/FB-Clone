@@ -622,3 +622,117 @@ main .container .right {
 .right .request .req__info p {
     margin: 0;
 }
+
+
+
+/* .................. theme customization....................... */
+
+.customize__theme {
+    background-color: rgba(255, 255, 255, 0.5);
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    font-size: 0.9rem;
+    backdrop-filter: blur(1px);
+    display:none;
+}
+
+.customize__theme .card {
+    background: var(--color-white);
+    padding: 3rem;
+    border-radius: var(--card-border-radius);
+    width: 50%;
+
+}
+
+.customize__theme .font__size {
+    margin-top: 5rem;
+}
+
+.customize__theme .font__size>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--color-light);
+    padding: var(--search-padding);
+    border-radius: var(--card-border-radius);
+}
+
+
+.customize__theme .choose__size {
+    background: var(--color-secondary);
+    height: 0.3rem;
+    width: 100%;
+    margin: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.customize__theme .choose__size span {
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--color-secondary);
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+
+.customize__theme .choose__size span.active {
+    background: var(--color-primary);
+}
+
+
+/* ...................... font color .......................... */
+
+.customize__theme .color {
+    margin-top: 2rem;
+}
+
+
+.customize__theme .shoose__color {
+    background: var(--color-light);
+    padding: var(--search-padding);
+    border-radius: var(--card-border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.customize__theme .shoose__color span {
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.customize__theme .shoose__color span:nth-child(1) {
+    background: hsl(252, 75%, 60%);
+}
+
+.customize__theme .shoose__color span:nth-child(2) {
+    background: hsl(52, 75%, 60%);
+}
+
+.customize__theme .shoose__color span:nth-child(3) {
+    background: hsl(352, 75%, 60%);
+}
+
+.customize__theme .shoose__color span:nth-child(4) {
+    background: hsl(152, 75%, 60%);
+}
+
+.customize__theme .shoose__color span:nth-child(5) {
+    background: hsl(202, 75%, 60%);
+}
+
+
+
+
