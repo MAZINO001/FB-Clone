@@ -42,9 +42,10 @@
 body {
     font-family: "Poppins", sans-serif;
     color: var(--color-dark);
-    background-color: var(--color-light);
+    background: var(--color-light);
     overflow-x: hidden;
     box-sizing: border-box;
+    margin: 0;
 }
 
 /* ======================== CUSTOR STYLE ======================== */

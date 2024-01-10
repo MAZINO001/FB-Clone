@@ -162,7 +162,7 @@ let darkColorLightness;
 function changeBg() {
     root.style.setProperty("--light-color-lightness", lightColorLightness);
     root.style.setProperty("--white-color-lightness", whiteColorLightness);
-    root.style.setProperty("--dark-color-lightness", darkColorLightness);
+    root.style.setProperty("    --dark-color-lightness", darkColorLightness);
 }
 
 // Call changeBg initially to set default background colors
