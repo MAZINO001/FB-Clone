@@ -152,6 +152,8 @@ colorPallet.forEach(color => {
 
 
 /*......................... custome background colors .........................*/
+
+
 const bg1 = document.querySelector(".bg__1");
 const bg2 = document.querySelector(".bg__2");
 const bg3 = document.querySelector(".bg__3");
@@ -167,7 +169,7 @@ function changeBg() {
 }
 
 // Call changeBg initially to set default background colors
-changeBg();
+// changeBg();
 
 bg2.addEventListener("click", () => {
     darkColorLightness = "95%";
